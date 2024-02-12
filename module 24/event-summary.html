@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM Summary</title>
+</head>
+<body>
+    <h1>Final Dom Event Handlers</h1>
+    <h3 id="handler-status">Default Text</h3>
+    <br>
+    <br>
+    <br>
+    <h2 id="text-display">Reazul Hasan Prince</h2>
+    <input type="text" name="" id="input-field">
+    <button id="btn-update"> Update Name</button>
+    <br>
+    <br>
+    <br>
+    <button onclick="handleOnClick()">Handle Event by add onclick function</button>
+    <button id="event-listener">Handle event by addlisterner</button>
+    <script>
+        function handleOnClick(){
+         const handlerStatus = document.getElementById('handler-status');
+         handlerStatus.innerText = 'Handled by function attached on onclick attribute'
+        }
+        // option 2
+        document.getElementById('event-listener').addEventListener('click',function(){
+            const handlerStatus = document.getElementById('handler-status')
+            handlerStatus.innerText = 'Text updated';
+        })
+        
+        // option 2 recap
+        document.getElementById('btn-update').addEventListener('click',function(){
+            const inputField = document.getElementById('input-field')
+            //innerText diye input er virtorer text pawa jabe na. value use korte hobe
+            const inputText = inputField.value;
+
+
+            const displayText = document.getElementById('text-display');
+            displayText.innerText = inputText;
+            // inputField.innerText = ' ' input er khetre innterText kaj kore na, value use kora lagbe akhane
+            inputField.value = ''
+        })
+    </script>
+</body>
+</html>

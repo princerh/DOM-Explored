@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubble</title>
+</head>
+<body id="body">
+    <h1>Exploring Event Bubble</h1>
+    <section id="list-container">
+        <ul id="li-container">
+            <li id="list-item-1">Lorem, ipsum.</li>
+            <li id="list-item-2">Repudiandae, dolor!</li>
+            <li id="list-item-3">Consectetur, officiis?</li>
+            <li id="list-item-4">Perspiciatis, enim?</li>
+            <li id="list-item-5">Autem, numquam.</li>
+            <li id="list-item-6">Obcaecati, pariatur.</li>
+        </ul>
+    </section>
+    <script>
+        document.getElementById('list-item-2').addEventListener('click',function(event){
+            console.log("list item 2 clicked")
+            event.stopImmediatePropagation() /* aiber oi akta bade r kono ta triggered hobe na 
+            *//* akhane stopPropagation() dile sudhu ai level a joto gula eventhandler ase oi gulai triggered hobe, uporer level gulate jabe na */
+
+
+        })
+        document.getElementById('list-item-2').addEventListener('click',function(event){
+            console.log("list item 2 second clicked")
+            
+        })
+        document.getElementById('list-item-2').addEventListener('click',function(event){
+            console.log("list item 2 third clicked")
+        
+        })
+
+
+        document.getElementById('li-container').addEventListener('click',function(){
+            console.log("ul clicked")
+        })
+
+        document.getElementById('list-container').addEventListener('click',function(){
+            console.log("section clicked clicked")
+        })
+
+        document.getElementById('body').addEventListener('click',function(){
+            console.log("whole body clicked clicked")
+        })
+
+        /* atai hocche event bubble. prothome item 2, then ul, then section , then whole body clicked. ai event bubble k stop korte chaile event.stopPropagation() use korbo */
+    </script>
+</body>
+</html>

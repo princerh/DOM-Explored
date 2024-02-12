@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Events</title>
+</head>
+<body>
+    <h1>Explore More Events</h1>
+    <button id="btn-more">Events</button>
+    <input type="text" id="text-field">
+    <script>
+        // document.getElementById('text-field').addEventListener('focus',function(){
+        //    console.log("event triggered inside the field");  /* focus dile input field a click korlei trigger korbe */
+        // })
+        // document.getElementById('text-field').addEventListener('blur',function(){
+        //    console.log("event triggered inside the field by blur");  /* blur dile input field er baire click korlei trigger korbe */
+        // })
+        document.getElementById('btn-more').addEventListener('mousemove' /* mouse button er upor nilei triger korbe */, function(){
+            console.log("event triggered")
+        })
+
+        // mousemove dile joto bar narabo button er vitore totbar trigger korbe
+
+
+        // document.getElementById('text-field').addEventListener('keydown',function(){
+        //    console.log(event);  /* akta akta kore letter dkhabe  */
+
+        //    document.getElementById('text-field').addEventListener('keydown',function(){
+        //    console.log(event.target.value); /* sudhu .target dile input tag ta dkhabe */ /* .value dile prothome dkhay na letter ta */ 
+        // })
+
+        // document.getElementById('text-field').addEventListener('keypress',function(){
+        //    console.log(event.target.value); )} /* akhaneo keydown er moto same problem */
+
+
+        document.getElementById('text-field').addEventListener('keyup',function(){
+           console.log(event.target.value); })
+        /* input a ki liktese aita dkhte chaile keyup use korbo  */
+    </script>
+</body>
+</html>

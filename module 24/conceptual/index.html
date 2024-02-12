@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Review System</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.3/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+
+
+</head>
+<body >
+    <section class="container flex flex-col justify-center pt-10 mx-auto space-y-5">
+        <h1 class="text-4xl text-black font-bold">
+            Goriber Portfolio Review System
+        </h1>
+
+        <textarea class="textarea textarea-accent w-2/3" id="textarea"  cols="20" rows="3" placeholder="Type Your Message"></textarea>
+        <button class="btn px-7 w-1/4 bg-green-400" id="button">
+            Submit
+        </button>
+
+        <div id="review">
+            <h2 class="text-4xl text-red-500 font-semibold text-left mb-6"> Public Reviews: </h2>
+            
+
+        
+        </div>
+
+    </section>
+    <script src="./review.js"></script>
+</body>
+</html>
