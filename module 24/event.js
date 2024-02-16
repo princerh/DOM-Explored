@@ -4,9 +4,11 @@ console.log('this is separated js file')
 
 
 // option 2: add on click function
-function makeRed(){
-    document.body.style.backgroundColor = 'red';
-}
+
+
+document.getElementById('button').addEventListener('click', function () {
+    document.body.style.background = 'red';
+   });
 
 // option 3 
 const makeBlueButton = document.getElementById('make-blue');
